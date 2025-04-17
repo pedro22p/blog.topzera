@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Blog Topzera: notícias, diversão, dicas de programação e ferramentas exclusivas!">
+  <title>Blog Topzera</title>
+  <link rel="icon" href="https://i.pinimg.com/736x/a1/b6/bd/a1b6bd4bbe3027d3f0047bf9639fa964.jpg" type="image/jpg">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(270deg, #ff0000, #ffa500, #ffff00, #ff0000);
+      background-size: 800% 800%;
+      animation: gradientAnim 6s linear infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientAnim {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff700;
+    }
+
+    nav {
+      background-color: rgba(255, 69, 0, 0.9);
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffff00;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .titulo-oficial {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffffff;
+      background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 50px 0 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px #000;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    article p, ol li {
+      color: #f0f0f0;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    .destaque-topzera {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 0, 0, 0.7);
+      color: #fff;
+      margin-top: 60px;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #ff4500;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    #topBtn:hover {
+      background-color: #e63600;
+    }
+
+    .counter {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 10px 0 30px;
+    }
+
+    /* Estilo para os comentários */
+    #comentarios-lista div {
+      background-color: #000; /* Fundo preto */
+      color: #fff; /* Texto branco */
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.1rem;
+      }
+
+      main {
+        padding: 20px 10px;
+      }
+
+      .titulo-oficial {
+        font-size: 1.5rem;
+        padding: 10px;
+      }
+
+      article p, ol li {
+        font-size: 1rem;
+      }
+
+      #topBtn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+      }
+
+      .counter {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body onload="boasVindas()">
+
+  <header>
+    <h1>BLOG TOPZERAAA!!!🔥</h1>
+  </header>
+
+  <nav>
+    <a href="#educativo">Educativo</a>
+    <a href="#divertido">Notícias Gamer</a>
+    <a href="#sobre">Sobre o Blog</a>
+    <a href="#DICAS">Dicas de Jogo</a>
+  </nav>
+
+  <main>
+    <div class="counter">Visualizações: 745</div>
+    <div class="counter">Clones: 216</div>
+
+    <section id="educativo">
+      <div class="titulo-oficial">🚀 10 Dicas Para Criar Um Blog em 2025</div>
+      <ol>
+        <li><strong>Escolher uma plataforma de blog</strong></li>
+        <li><strong>Selecionar uma hospedagem (GitHub é ótimo e tem domínio grátis)</strong></li>
+        <li><strong>Escolher um tema e nicho</strong></li>
+        <li><strong>Criar um calendário editorial</strong></li>
+        <li><strong>Escrever o primeiro post</strong></li>
+        <li><strong>Promover o blog</strong></li>
+        <li><strong>Escrever sobre assuntos relevantes</strong></li>
+        <li><strong>Criar um layout agradável</strong></li>
+      </ol>
+    </section>
+
+    <section id="sobre">
+      <div class="titulo-oficial">📣 Notícias do Blog</div>
+      <p><span class="destaque-topzera">Notícia: BATEMOS 745 visualizações! Vamos alcançar 1000! Quando isso acontecer, sai a versão 1.0.3.6 do site!</span></p>
+    </section>
+
+    <section id="divertido">
+      <div class="titulo-oficial">🎮 Notícias no Mundo Gamer</div>
+      <ol>
+        <li><strong>6 jogos grátis na Steam em abril:</strong></li>
+        <li><strong>13/abr./2025 - Supercharged Demo</strong></li>
+        <li><strong>13/abr./2025 - HR Simulator</strong></li>
+        <li><strong>13/abr./2025 - It Digs Up</strong></li>
+        <li><strong>13/abr./2025 - Clonizer</strong></li>
+        <li><strong>13/abr./2025 - Parking Lot Simulator: Car Collector</strong></li>
+      </ol>
+    </section>
+
+    <section id="DICAS">
+      <div class="titulo-oficial">💡 Dicas de Sobrevivência em Jogos</div>
+      <ol>
+        <li><strong>Jogo de hoje: Cuphead</strong></li>
+        <li><strong>Escolha uma plataforma</strong></li>
+        <li><strong>Jogue com um amigo</strong></li>
+        <li><strong>Treine para enfrentar os chefes!</strong></li>
+        <li><strong>Use o bacamarte para causar dano</strong></li>
+        <li><strong>Obtenha moedas para comprar itens</strong></li>
+        <li><strong>Use para ganhar golpe EX</strong></li>
+        <li><strong>Experimente a relíquia Bomba de Fumaça</strong></li>
+      </ol>
+    </section>
+
+    <!-- Seção de Comentários -->
+    <section id="comentarios">
+      <div class="titulo-oficial">💬 Comentários</div>
+      <div id="comentarios-lista"></div>
+
+      <textarea id="comentario" placeholder="Deixe seu comentário aqui..."></textarea>
+      <button onclick="comentar()">Comentar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blog Topzera - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- BOTÃO DE VOLTAR AO TOPO -->
+  <button id="topBtn" onclick="topFunction()">Voltar ao Topo</button>
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "SEU_AUTH_DOMAIN",
+      databaseURL: "SUA_DATABASE_URL",
+      projectId: "SEU_PROJECT_ID",
+      storageBucket: "SEU_STORAGE_BUCKET",
+      messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+      appId: "SEU_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+
+    function mostrarComentarios() {
+      var comentariosRef = database.ref('comentarios');
+      comentariosRef.on('value', function(snapshot) {
+        var comentarios = snapshot.val();
+        var listaComentarios = document.getElementById('comentarios-lista');
+        listaComentarios.innerHTML = '';
+        for (var id in comentarios) {
+          var comentario = comentarios[id];
+          var divComentario = document.createElement('div');
+          divComentario.textContent = comentario.texto;
+          listaComentarios.appendChild(divComentario);
+        }
+      });
+    }
+
+    function comentar() {
+      var comentarioTexto = document.getElementById('comentario').value;
+      if (comentarioTexto.trim()) {
+        var comentariosRef = database.ref('comentarios');
+        comentariosRef.push({
+          texto: comentarioTexto
+        });
+        document.getElementById('comentario').value = '';
+      }
+    }
+
+    // Carregar os comentários quando a página carregar
+    window.onload = mostrarComentarios;
+  </script>
+
+</body>
+</html>
