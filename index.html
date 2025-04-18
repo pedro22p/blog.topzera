@@ -5,21 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Blog Topzera: notícias, diversão, dicas de programação e ferramentas exclusivas!">
   <title>Blog Topzera</title>
-  <link rel="icon" href="https://i.pinimg.com/736x/a1/b6/bd/a1b6bd4bbe3027d3f0047bf9639fa964.jpg" type="image/jpg">
-  <style>
+  <link rel="incon"https://png.pngtree.com/png-vector/20190725/ourlarge/pngtree-fire-logo-design-template-vector-png-image_1588148.jpg" href="favicon.png">
+   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(270deg, #ff0000, #ffa500, #ffff00, #ff0000);
-      background-size: 800% 800%;
-      animation: gradientAnim 6s linear infinite;
+      background-size: 100% 100%; /* Fundo fixo sem animação */
       color: #fff;
-    }
-
-    @keyframes gradientAnim {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     header {
@@ -297,16 +290,35 @@
       var comentarioTexto = document.getElementById('comentario').value;
       if (comentarioTexto.trim()) {
         var comentariosRef = database.ref('comentarios');
-        comentariosRef.push({
+        comentariosRef.push().set({
           texto: comentarioTexto
         });
         document.getElementById('comentario').value = '';
       }
     }
 
-    // Carregar os comentários quando a página carregar
-    window.onload = mostrarComentarios;
-  </script>
+    // Função para voltar ao topo
+    var mybutton = document.getElementById("topBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    };
 
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    function boasVindas() {
+      alert("Bem-vindo ao Blog Topzera!");
+    }
+
+    mostrarComentarios(); // Exibe os comentários na inicialização
+  </script>
 </body>
 </html>
+
+
